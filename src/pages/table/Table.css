@@ -1,0 +1,29 @@
+.lol .more:hover {
+  background-color: #0000ff80;
+}
+.lol table {
+  width: 100%;
+}
+.lol .error {
+  background-color: #0000ff;
+}
+.lol caption {
+  margin-bottom: 10px;
+}
+.lol .caption {
+  background-color: black;
+  color: #fff;
+}
+.lol table {
+  margin: 0 auto;
+}
+.lol caption {
+  font-size: 50px;
+}
+.lol {
+  background-color: #ffffffe8;
+  padding: 30px;
+}
+.lol p {
+  font-size: 28px;
+}

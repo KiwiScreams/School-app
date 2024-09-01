@@ -1,0 +1,89 @@
+{
+  "objects": [
+    {
+      "id": "0c72",
+      "name": "მსოფლიო ისტორია",
+      "image": "https://cdn-icons-png.flaticon.com/512/10089/10089731.png",
+      "color": "#421e00",
+      "grades": []
+    },
+    {
+      "id": "611d",
+      "name": "მათემატიკა",
+      "image": "https://cdn-icons-png.flaticon.com/512/4720/4720458.png",
+      "color": "#005c28",
+      "grades": []
+    },
+    {
+      "id": "b396",
+      "name": "ქართული",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv4pqQjfMWVDUVWX50GXeP4YK1OzQKgFB8FQ&s",
+      "color": "#940000",
+      "grades": []
+    },
+    {
+      "id": "9bce",
+      "name": "რუსული",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWoeKouShcsCR_fGvnSY0ogQD39Fj7oi84uQ&s",
+      "color": "#1e00ff",
+      "grades": []
+    },
+    {
+      "id": "67b0",
+      "name": "ინგლისური",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN6NjUzMsxiPYELyWrKg17MA4eLo47fkkM2w&s",
+      "color": "#ff9742",
+      "grades": []
+    },
+    {
+      "id": "f4bf",
+      "name": "გეოგრაფია",
+      "image": "https://cdn-icons-png.flaticon.com/512/4405/4405444.png",
+      "color": "#ffbb00",
+      "grades": [],
+      "date": ""
+    },
+    {
+      "id": "9e0c",
+      "name": "სამოქალაქო",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQz1gzDJd_zhpAo4F0y5DSFSVkcrayxUUvoQ&s",
+      "color": "#52ff5d",
+      "grades": []
+    },
+    {
+      "id": "fcd3",
+      "name": "საქართველოს ისტორია",
+      "image": "https://cdn-icons-png.flaticon.com/512/2201/2201580.png",
+      "color": "#331700",
+      "grades": []
+    },
+    {
+      "id": "48ea",
+      "name": "ბიოლოგია",
+      "image": "https://cdn-icons-png.flaticon.com/512/2201/2201544.png",
+      "color": "#0a9400",
+      "grades": []
+    },
+    {
+      "id": "ceda",
+      "name": "ქიმია",
+      "image": "https://cdn-icons-png.flaticon.com/512/4720/4720458.png",
+      "color": "#6bd3ff",
+      "grades": []
+    },
+    {
+      "id": "e418",
+      "name": "ფიზიკა",
+      "image": "https://cdn-icons-png.flaticon.com/512/295/295805.png",
+      "color": "#d400ff",
+      "grades": []
+    },
+    {
+      "id": "a497",
+      "name": "სპორტი",
+      "image": "https://cdn-icons-png.flaticon.com/512/7438/7438654.png",
+      "color": "#7e9235",
+      "grades": []
+    }
+  ]
+}
