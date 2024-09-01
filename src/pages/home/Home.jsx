@@ -60,12 +60,6 @@ const Home = () => {
               <p className="tooltiptext left">საგნის დამატება</p>
             </div>
           </Link>
-          <Link to="/table" className="table-btn">
-            <i className="fa-solid fa-table-cells-row-unlock"></i>
-            <div className="tooltip">
-              <p className="tooltiptext right">ონლაინ ცხრილი</p>
-            </div>
-          </Link>
 
           <h1>საგნები</h1>
           <table>
