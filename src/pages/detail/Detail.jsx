@@ -5,40 +5,38 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Detail.css";
 import tinycolor from "tinycolor2";
+
 const Detail = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
   const [newGrade, setNewGrade] = useState("");
   const [showInput, setShowInput] = useState(false);
   const [averageGrade, setAverageGrade] = useState(0);
-  const [newDate, setNewDate] = useState("");
+
   useEffect(() => {
     axios
       .get("http://localhost:3030/objects/" + id)
       .then((res) => {
-        setData(res.data);
-        calculateAverageGrade(res.data.grades);
+        const grades = res.data.grades.filter((grade) => typeof grade === "number");
+        const updatedData = { ...res.data, grades };
+        setData(updatedData);
+        calculateAverageGrade(updatedData.grades);
       })
       .catch((err) => console.log(err));
   }, []);
 
   const handleAddGrade = () => {
-    const newGradeObject = {
-      grade: Number(newGrade),
-      date: newDate,
-    };
     axios
       .patch("http://localhost:3030/objects/" + id, {
-        grades: [...data.grades, newGradeObject],
+        grades: [...data.grades, Number(newGrade)],
       })
       .then((res) => {
         const updatedData = {
           ...data,
-          grades: [...data.grades, newGradeObject],
+          grades: [...data.grades, Number(newGrade)],
         };
         setData(updatedData);
         setNewGrade("");
-        setNewDate("");
         setShowInput(false);
         calculateAverageGrade(updatedData.grades);
       })
@@ -57,6 +55,7 @@ const Detail = () => {
     const tinyColor = tinycolor(color);
     return tinyColor.isDark();
   };
+
   return (
     <>
       <div className="full" style={{ backgroundColor: `${data.color}` }}>
