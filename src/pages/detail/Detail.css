@@ -55,3 +55,83 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+.read-section button.add {
+  display: none;
+}
+@media screen and (max-width: 1250px) {
+  .read-section {
+    width: 100%;
+    position: relative;
+  }
+  .read-section .read-container {
+    margin: auto;
+    width: 70%;
+    padding: 50px 100px;
+    box-shadow: 0 0 10px black;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .read-section {
+    width: 100%;
+    position: relative;
+  }
+  .read-section .read-container {
+    margin: auto;
+    width: 90%;
+    padding: 50px 100px;
+    box-shadow: 0 0 10px black;
+  }
+  .read-section .image {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: auto;
+    top: -120px;
+    left: 0px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .read-section .read-container {
+    margin: auto;
+    width: 90%;
+    padding: 50px 20px;
+  }
+  .read-section .image {
+    width: 200px;
+    height: 200px;
+    top: -150px;
+    left: 0px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .read-section .read-container {
+    margin: auto;
+    width: 100%;
+    padding: 50px 20px;
+    box-shadow: 0 0 10px black;
+    height: 100%;
+  }
+  .read-section .image {
+    width: 150px;
+    height: 150px;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+  }
+  .read-section button {
+    width: fit-content;
+    padding: 0 8px;
+    height: 50px;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  .read-section button.add {
+    display: block;
+    margin: auto;
+    margin-top: -60px;
+  }
+  .read-section button.add-desktop {
+    display: none;
+  }
+}

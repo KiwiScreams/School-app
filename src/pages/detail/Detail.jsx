@@ -17,7 +17,9 @@ const Detail = () => {
     axios
       .get("http://localhost:3030/objects/" + id)
       .then((res) => {
-        const grades = res.data.grades.filter((grade) => typeof grade === "number");
+        const grades = res.data.grades.filter(
+          (grade) => typeof grade === "number"
+        );
         const updatedData = { ...res.data, grades };
         setData(updatedData);
         calculateAverageGrade(updatedData.grades);
@@ -72,6 +74,20 @@ const Detail = () => {
             ></div>
             <div className="read-container">
               <h1 style={{ color: `${data.color}` }}>{data.name}</h1>
+              <button
+                className="add"
+                onClick={() => setShowInput(true)}
+                style={{
+                  backgroundColor: data.color ? data.color : "black",
+                  color: data.color
+                    ? isDarkColor(data.color)
+                      ? "white"
+                      : "black"
+                    : "black",
+                }}
+              >
+                დააამატე ქულა
+              </button>
               <div className="flex">
                 <div>
                   <p className="grade">
@@ -80,6 +96,7 @@ const Detail = () => {
                   <p>საშუალო ქულა: {averageGrade.toFixed(1)}</p>
                 </div>
                 <button
+                  className="add-desktop"
                   onClick={() => setShowInput(true)}
                   style={{
                     backgroundColor: data.color ? data.color : "black",
