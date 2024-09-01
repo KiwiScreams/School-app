@@ -2,7 +2,7 @@ import "./Table.css";
 const Table = () => {
   return (
     <>
-      <div className="lol">
+      <div className="table">
         <table>
           <caption>ცხრილი 2024 წელი</caption>
           <tr className="caption">
@@ -95,7 +95,7 @@ const Table = () => {
             <td>35 წთ</td>
           </tr>
           <tr className="more">
-            <td>C</td>
+            <td></td>
             <td>გეოგრაფია</td>
             <td></td>
             <td></td>
@@ -124,7 +124,7 @@ const Table = () => {
             <td></td>
             <td></td>
             <td></td>
-            <td className="error">19:00-21:00</td>
+            <td>19:00-21:00</td>
             <td>2 სთ</td>
           </tr>
           <tr className="more">
@@ -146,7 +146,7 @@ const Table = () => {
             <td></td>
             <td></td>
             <td></td>
-            <td className="error">20:00-22:00</td>
+            <td>20:00-22:00</td>
             <td>2 სთ</td>
           </tr>
         </table>

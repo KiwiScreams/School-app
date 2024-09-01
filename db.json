@@ -84,6 +84,13 @@
       "image": "https://cdn-icons-png.flaticon.com/512/7438/7438654.png",
       "color": "#7e9235",
       "grades": []
+    },
+    {
+      "id": "0c2f",
+      "name": "ქიმია",
+      "image": "https://cdn-icons-png.flaticon.com/512/4720/4720458.png",
+      "color": "",
+      "grades": []
     }
   ]
 }
