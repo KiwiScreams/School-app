@@ -5,13 +5,14 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Detail.css";
 import tinycolor from "tinycolor2";
+
 const Detail = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
   const [newGrade, setNewGrade] = useState("");
   const [showInput, setShowInput] = useState(false);
   const [averageGrade, setAverageGrade] = useState(0);
-  const [newDate, setNewDate] = useState("");
+
   useEffect(() => {
     axios
       .get("http://localhost:3030/objects/" + id)
@@ -25,7 +26,6 @@ const Detail = () => {
   const handleAddGrade = () => {
     const newGradeObject = {
       grade: Number(newGrade),
-      date: newDate,
     };
     axios
       .patch("http://localhost:3030/objects/" + id, {
@@ -38,7 +38,6 @@ const Detail = () => {
         };
         setData(updatedData);
         setNewGrade("");
-        setNewDate("");
         setShowInput(false);
         calculateAverageGrade(updatedData.grades);
       })
@@ -49,7 +48,7 @@ const Detail = () => {
     setAverageGrade(
       grades.length === 0
         ? 0
-        : grades.reduce((a, b) => a + b, 0) / grades.length
+        : grades.reduce((a, b) => a + b.grade, 0) / grades.length
     );
   };
 
@@ -57,6 +56,7 @@ const Detail = () => {
     const tinyColor = tinycolor(color);
     return tinyColor.isDark();
   };
+
   return (
     <>
       <div className="full" style={{ backgroundColor: `${data.color}` }}>
@@ -76,7 +76,9 @@ const Detail = () => {
               <div className="flex">
                 <div>
                   <p className="grade">
-                    ქულა: {data.grades && data.grades.join(" | ")}
+                    ქულა:{" "}
+                    {data.grades &&
+                      data.grades.map((grade) => grade.grade).join(" | ")}
                   </p>
                   <p>საშუალო ქულა: {averageGrade.toFixed(1)}</p>
                 </div>
