@@ -2,7 +2,7 @@ import "./Table.css";
 const Table = () => {
   return (
     <>
-      <div className="lol">
+      <div className="table">
         <table>
           <caption>ცხრილი 2024 წელი</caption>
           <tr className="caption">
