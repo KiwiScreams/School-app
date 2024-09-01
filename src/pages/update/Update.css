@@ -1,38 +1,37 @@
 .update-section {
-    width: 70%;
-    box-shadow: 0 0 10px black;
-    padding: 50px 100px;
-  }
-  .update-section .input-container {
-    margin-bottom: 20px;
-  }
-  .update-section .input-container input {
-    width: 100%;
-    height: 50px;
-    font-size: 22px;
-    padding-left: 20px;
-    border-radius: 20px;
-    border: 3px solid black;
-  }
-  .update-section .input-container label {
-    margin-bottom: 10px;
-    display: block;
-    font-size: 22px;
-  }
-  .update-section button {
-    width: 200px;
-    height: 50px;
-    border-radius: 20px;
-    margin-top: 50px;
-    font-size: 22px;
-    background-color: black;
-    color: white;
-    display: block;
-    margin: auto;
-    transition: 0.3s;
-  }
-  .update-section button:hover {
-    opacity: 0.8;
-    transition: 0.3s;
-  }
-  
+  width: 70%;
+  box-shadow: 0 0 10px black;
+  padding: 50px 100px;
+}
+.update-section .input-container {
+  margin-bottom: 20px;
+}
+.update-section .input-container input {
+  width: 100%;
+  height: 50px;
+  font-size: 22px;
+  padding-left: 20px;
+  border-radius: 20px;
+  border: 3px solid black;
+}
+.update-section .input-container label {
+  margin-bottom: 10px;
+  display: block;
+  font-size: 22px;
+}
+.update-section button {
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 50px;
+  font-size: 22px;
+  background-color: black;
+  color: white;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+.update-section button:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
