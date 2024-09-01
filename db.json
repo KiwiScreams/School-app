@@ -83,11 +83,7 @@
       "name": "სპორტი",
       "image": "https://cdn-icons-png.flaticon.com/512/7438/7438654.png",
       "color": "#7e9235",
-      "grades": [
-        10,
-        10,
-        20
-      ]
+      "grades": []
     }
   ]
 }
