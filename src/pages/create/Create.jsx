@@ -48,12 +48,13 @@ const Create = () => {
               <h1>შექმნა</h1>
               <div className="line"></div>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} id="create-form" name="create-form">
               <div className="input-container">
                 <label htmlFor="name">საგანი</label>
                 <input
                   type="text"
                   name="name"
+                  id="name"
                   placeholder="ჩაწერეთ საგნის დასახელება"
                   onChange={(e) =>
                     setInputData({ ...inputData, name: e.target.value })
@@ -65,6 +66,7 @@ const Create = () => {
                 <input
                   type="text"
                   name="image"
+                  id="image"
                   placeholder="ჩააგდეთ ხატულას URL"
                   onChange={(e) =>
                     setInputData({ ...inputData, image: e.target.value })
@@ -76,6 +78,7 @@ const Create = () => {
                 <input
                   type="color"
                   name="color"
+                  id="color"
                   placeholder="აირჩიეთ საგნის ფერი"
                   onChange={(e) =>
                     setInputData({ ...inputData, color: e.target.value })

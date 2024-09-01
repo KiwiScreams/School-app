@@ -59,6 +59,7 @@ const Update = () => {
                 <input
                   type="text"
                   name="name"
+                  id="name"
                   value={inputData.name}
                   onChange={(e) =>
                     setInputData({ ...inputData, name: e.target.value })
@@ -70,6 +71,7 @@ const Update = () => {
                 <input
                   type="text"
                   name="image"
+                  id="image"
                   value={inputData.image}
                   onChange={(e) =>
                     setInputData({ ...inputData, image: e.target.value })
@@ -81,6 +83,7 @@ const Update = () => {
                 <input
                   type="color"
                   name="color"
+                  id="color"
                   value={inputData.color}
                   onChange={(e) =>
                     setInputData({ ...inputData, color: e.target.value })
