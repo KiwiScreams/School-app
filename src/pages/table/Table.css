@@ -1,29 +1,29 @@
-.lol .more:hover {
+.table .more:hover {
   background-color: #0000ff80;
 }
-.lol table {
+.table table {
   width: 100%;
 }
-.lol .error {
+.table .error {
   background-color: #0000ff;
 }
-.lol caption {
+.table caption {
   margin-bottom: 10px;
 }
-.lol .caption {
+.table .caption {
   background-color: black;
   color: #fff;
 }
-.lol table {
+.table table {
   margin: 0 auto;
 }
-.lol caption {
+.table caption {
   font-size: 50px;
 }
-.lol {
+.table {
   background-color: #ffffffe8;
   padding: 30px;
 }
-.lol p {
+.table p {
   font-size: 28px;
 }
