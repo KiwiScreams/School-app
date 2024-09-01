@@ -52,6 +52,11 @@ const Detail = () => {
         : grades.reduce((a, b) => a + b, 0) / grades.length
     );
   };
+
+  const isDarkColor = (color) => {
+    const tinyColor = tinycolor(color);
+    return tinyColor.isDark();
+  };
   return (
     <>
       <div className="full" style={{ backgroundColor: `${data.color}` }}>
@@ -80,7 +85,10 @@ const Detail = () => {
                   style={{
                     backgroundColor: data.color ? data.color : "black",
                     color: data.color
-                     
+                      ? isDarkColor(data.color)
+                        ? "white"
+                        : "black"
+                      : "black",
                   }}
                 >
                   დააამატე ქულა
