@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Home.css";
 import Panel from "../panel/Panel";
@@ -58,12 +57,6 @@ const Home = () => {
             +
             <div className="tooltip">
               <p className="tooltiptext left">საგნის დამატება</p>
-            </div>
-          </Link>
-          <Link to="/table" className="table-btn">
-            <i className="fa-solid fa-table-cells-row-unlock"></i>
-            <div className="tooltip">
-              <p className="tooltiptext right">ონლაინ ცხრილი</p>
             </div>
           </Link>
 
