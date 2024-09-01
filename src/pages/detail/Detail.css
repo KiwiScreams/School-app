@@ -1,0 +1,57 @@
+.read-section {
+  width: 80%;
+  position: relative;
+}
+.read-section .image {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin: auto;
+  top: -80px;
+  left: 80px;
+  border-radius: 50%;
+  position: absolute;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.read-section .read-container {
+  background-color: white;
+  margin: auto;
+  width: 70%;
+  padding: 50px 100px;
+  box-shadow: 0 0 10px black;
+}
+.read-section p {
+  font-size: 22px;
+  font-weight: 900;
+}
+.read-section button {
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 50px;
+  font-size: 22px;
+  transition: 0.3s;
+}
+.read-section button:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.read-section .show-input {
+  width: 100%;
+}
+.read-section input {
+  width: 200px;
+  height: 50px;
+  font-size: 22px;
+  padding-left: 20px;
+  border-radius: 20px;
+}
+.read-section input[type="color"] {
+  width: 50%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
