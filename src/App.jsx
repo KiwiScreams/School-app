@@ -6,7 +6,7 @@ import Update from "./pages/update/Update";
 import Detail from "./pages/detail/Detail";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Navigate } from "react-router-dom";
 function App() {
   const navigate = useNavigate();
   axios
@@ -26,6 +26,7 @@ function App() {
         <Route path="/create" element={<Create />}></Route>
         <Route path="/update/:id" element={<Update />}></Route>
         <Route path="/read/:id" element={<Detail />}></Route>
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
   );
