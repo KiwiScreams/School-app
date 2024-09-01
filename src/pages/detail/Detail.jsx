@@ -17,24 +17,23 @@ const Detail = () => {
     axios
       .get("http://localhost:3030/objects/" + id)
       .then((res) => {
-        setData(res.data);
-        calculateAverageGrade(res.data.grades);
+        const grades = res.data.grades.filter((grade) => typeof grade === "number");
+        const updatedData = { ...res.data, grades };
+        setData(updatedData);
+        calculateAverageGrade(updatedData.grades);
       })
       .catch((err) => console.log(err));
   }, []);
 
   const handleAddGrade = () => {
-    const newGradeObject = {
-      grade: Number(newGrade),
-    };
     axios
       .patch("http://localhost:3030/objects/" + id, {
-        grades: [...data.grades, newGradeObject],
+        grades: [...data.grades, Number(newGrade)],
       })
       .then((res) => {
         const updatedData = {
           ...data,
-          grades: [...data.grades, newGradeObject],
+          grades: [...data.grades, Number(newGrade)],
         };
         setData(updatedData);
         setNewGrade("");
@@ -48,7 +47,7 @@ const Detail = () => {
     setAverageGrade(
       grades.length === 0
         ? 0
-        : grades.reduce((a, b) => a + b.grade, 0) / grades.length
+        : grades.reduce((a, b) => a + b, 0) / grades.length
     );
   };
 
@@ -76,9 +75,7 @@ const Detail = () => {
               <div className="flex">
                 <div>
                   <p className="grade">
-                    ქულა:{" "}
-                    {data.grades &&
-                      data.grades.map((grade) => grade.grade).join(" | ")}
+                    ქულა: {data.grades && data.grades.join(" | ")}
                   </p>
                   <p>საშუალო ქულა: {averageGrade.toFixed(1)}</p>
                 </div>
