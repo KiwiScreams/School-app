@@ -7,8 +7,11 @@ import Detail from "./pages/detail/Detail";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 function App() {
   const navigate = useNavigate();
+  const location = useLocation();
   axios
     .get("http://localhost:3030/objects")
     .then((response) => {
@@ -19,6 +22,24 @@ function App() {
     .catch((error) => {
       console.error(error);
     });
+  useEffect(() => {
+    switch (true) {
+      case location.pathname === "/":
+        document.title = "ონლაინ ცხრილი";
+        break;
+      case location.pathname === "/create":
+        document.title = "შექმნა";
+        break;
+      case location.pathname.startsWith("/update/"):
+        document.title = "ედითი";
+        break;
+      case location.pathname.startsWith("/read/"):
+        document.title = "დეტალურად";
+        break;
+      default:
+        document.title = "ონლაინ ცხრილი";
+    }
+  }, [location]);
   return (
     <>
       <Routes>
