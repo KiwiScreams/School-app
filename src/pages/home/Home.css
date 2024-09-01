@@ -1,54 +1,111 @@
-.home-section td.image
-{
+.home-section td.image {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 8px solid;
+}
+.home-section table {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.home-section thead {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+.home-section table thead th {
+  font-size: 26px;
+  padding-bottom: 60px;
+}
+.home-section .name {
+  font-size: 22px;
+  font-weight: 900;
+}
+.home-section .grade {
+  font-size: 28px;
+  font-weight: 800;
+}
+.home-section table tbody tr {
+  box-shadow: 0px 20px 5px -6px rgba(0, 0, 0, 0.137);
+}
+.home-section i {
+  font-size: 30px;
+  background-color: transparent;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+.home-section td i:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+@media screen and (max-width: 900px) {
+  .home-section table {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 760px) {
+  .home-section table {
+    width: 100%;
+  }
+  .home-section td.image {
     width: 100px;
     height: 100px;
-    overflow: hidden;
-    border-radius: 50%;
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    border: 8px solid;
-}
-.home-section table
-{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-}
-.home-section thead
-{
-    position: sticky;
-    top: 0;
-    background-color: white;
-}
-.home-section table thead th
-{
-    font-size: 26px;
-    padding-bottom: 60px;
-}
-.home-section .name
-{
-    font-size: 22px;
-    font-weight: 900;
-}
-.home-section .grade
-{
-    font-size: 28px;
-    font-weight: 800;
-}
-.home-section table tbody tr
-{
-    box-shadow: 0px 20px 5px -6px rgba(0, 0, 0, 0.137);
-}
-.home-section i
-{
-    font-size: 30px;
+    border: 5px solid;
+  }
+  .home-section table thead th {
+    font-size: 20px;
+    padding-bottom: 30px;
+  }
+  .home-section .name {
+    font-size: 18px;
+  }
+  .home-section .grade {
+    font-size: 24px;
+  }
+  .home-section i {
+    font-size: 20px;
     background-color: transparent;
     margin-right: 10px;
+    padding: 5px 10px;
     transition: 0.3s;
+  }
 }
-.home-section td i:hover
-{
-    opacity: 0.5;
-    transition: 0.3s;
+@media screen and (max-width: 580px) {
+  .home-section td.image {
+    border: 3px solid;
+  }
+  .home-section table thead th {
+    display: none;
+  }
+  .home-section .name {
+    font-size: 16px;
+  }
+  .home-section .grade {
+    font-size: 16px;
+  }
+  .home-section i {
+    font-size: 18px;
+    margin-right: 5px;
+    background-color: transparent;
+    padding: 5px 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .home-section .name {
+    font-size: 16px;
+  }
+  .home-section .grade {
+    display: none;
+  }
+  .home-section i {
+    font-size: 18px;
+    margin-right: 5px;
+    background-color: transparent;
+    padding: 5px 10px;
+  }
 }
